@@ -4,6 +4,7 @@ import dotenv from "dotenv"
 dotenv.config()
 
 import connectDB from "./db/index.js";
+import {app} from "./app.js"
 
 
 connectDB()  // connectDB is an asyn method which we have written in './src/db/index.js' so it return promise.
