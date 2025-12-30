@@ -1,7 +1,14 @@
 // require('dotevn').config({path: './env'})        //it will work but breaks the consistancy
 
-import dotenv from "dotenv"
-dotenv.config()
+import path from "path";
+import dotenv from "dotenv";
+
+dotenv.config({
+  path: path.resolve(process.cwd(), ".env")
+});
+
+
+
 
 import connectDB from "./db/index.js";
 import {app} from "./app.js"
